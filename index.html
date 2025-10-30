@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Электронный учебник</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar">
+        <div class="logo">
+          <h1><i class="fas fa-book-open"></i> Содержание</h1>
+        </div>
+        <ul class="nav-menu">
+          <li>
+            <a href="#chapter1"><i class="fas fa-chevron-right"></i> Глава 1</a>
+          </li>
+          <li>
+            <a href="#chapter2"><i class="fas fa-chevron-right"></i> Глава 2</a>
+          </li>
+          <li>
+            <a href="#chapter3"><i class="fas fa-chevron-right"></i> Глава 3</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="content">
+        <section id="chapter1" class="chapter">
+          <h2>Глава 1</h2>
+          <div class="chapter-content">
+            <p>Содержание первой главы...</p>
+            <div class="multimedia">
+              <div class="interactive">
+                <h3>
+                  <i class="fas fa-play-circle"></i> Интерактивный контент
+                </h3>
+                <div class="image-container">
+                  <img src="assets/placeholder.jpg" alt="Изображение 1" />
+                </div>
+              </div>
+              <div class="quiz-container">
+                <h3>
+                  <i class="fas fa-question-circle"></i> Проверьте свои знания
+                </h3>
+                <div class="quiz-question">
+                  <p>Вопрос 1: ...</p>
+                </div>
+                <div class="quiz-options">
+                  <div class="quiz-option">Вариант 1</div>
+                  <div class="quiz-option">Вариант 2</div>
+                  <div class="quiz-option">Вариант 3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="chapter2" class="chapter">
+          <h2>Глава 2</h2>
+          <div class="chapter-content">
+            <p>Содержание второй главы...</p>
+            <div class="multimedia">
+              <div class="interactive">
+                <h3><i class="fas fa-video"></i> Видео материал</h3>
+                <div class="video-container">
+                  <!-- Место для видео -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="chapter3" class="chapter">
+          <h2>Глава 3</h2>
+          <div class="chapter-content">
+            <p>Содержание третьей главы...</p>
+            <div class="multimedia">
+              <div class="interactive">
+                <h3><i class="fas fa-tasks"></i> Практическое задание</h3>
+                <div class="task-container">
+                  <!-- Место для практического задания -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

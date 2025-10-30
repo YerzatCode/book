@@ -1,0 +1,234 @@
+:root {
+  --primary-color: #2962ff;
+  --secondary-color: #0039cb;
+  --background-color: #f8f9fa;
+  --text-color: #2c3e50;
+  --sidebar-bg: #ffffff;
+  --chapter-bg: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: var(--sidebar-bg);
+  padding: 2rem;
+  position: fixed;
+  height: 100vh;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  overflow-y: auto;
+}
+
+.logo {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.nav-menu {
+  list-style: none;
+}
+
+.nav-menu li {
+  margin-bottom: 1rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  display: block;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.nav-menu a:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateX(5px);
+}
+
+.nav-menu a.active {
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.content {
+  flex: 1;
+  margin-left: 280px;
+  padding: 2rem 3rem;
+}
+
+.chapter {
+  background-color: var(--chapter-bg);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.chapter:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chapter h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.chapter h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.chapter-content {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.multimedia {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+/* Стили для интерактивных элементов */
+.interactive {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* Стили для изображений */
+.image-container {
+  position: relative;
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+/* Стили для кнопок и интерактивных элементов */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+/* Стили для quiz и тестов */
+.quiz-container {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: var(--shadow);
+}
+
+.quiz-question {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.quiz-options {
+  display: grid;
+  gap: 1rem;
+}
+
+.quiz-option {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.quiz-option:hover {
+  border-color: var(--primary-color);
+  background-color: #e3f2fd;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chapter {
+  animation: fadeIn 0.5s ease-out;
+}
